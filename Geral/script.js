@@ -116,6 +116,7 @@ function renderizarPagina() {
                 modalTitle.innerText = canal.nome;
                 iframe.src = canal.url;
                 playerModal.show();
+                iframe.setAttribute('sandbox', 'allow-forms allow-scripts allow-same-origin allow-presentation');
             };
             containerGeral.appendChild(col);
         });
