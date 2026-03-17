@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVJR - Central de Canais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="fotos/TVJR.png" type="image/x-icon">
+</head>
+<body>
+
+    <header class="site-header text-center">
+        <div class="container d-flex flex-column align-items-center">
+            <div class="logo-tvjr-container mb-2 mt-4">
+                <img src="fotos/TVJR.png" alt="TVJR Logo" class="header-logo">
+            </div>
+            <p class="h6 text-white opacity-75 mb-4 max-w-tagline">Central unificada de canais ao vivo. Abra o player e curta sua programação favorita.</p>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="d-flex flex-wrap gap-2 justify-content-center" id="catBar">
+            </div>
+    </div>
+
+    <div class="container mt-4 mb-5">
+        <div class="input-group search-group-modern shadow mx-auto" style="max-width: 720px;">
+            <span class="input-group-text bg-transparent border-0 pe-1"><i class="bi bi-search text-white-50"></i></span>
+            <input type="search" id="inputBusca" class="form-control form-control-dark bg-transparent border-0" placeholder="Buscar canais...">
+        </div>
+    </div>
+
+    <main class="container py-2">
+        <div class="row" id="lista-canais">
+            </div>
+    </main>
+
+    <div class="modal fade" id="playerModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow-lg">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-white" id="modalTitle">Assistindo...</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9 bg-black">
+                        <iframe id="videoIframe" src="" allow="autoplay; fullscreen; encrypted-media" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script src="script.js"></script>
+</body>
+</html>
